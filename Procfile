@@ -1,1 +1,4 @@
-web: gunicorn ensemble4publish.wsgi --log-file -
+web: gunicorn ensemble4publish.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput:
+manage.py migrate
+
