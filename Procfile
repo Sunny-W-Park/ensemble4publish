@@ -1,1 +1,1 @@
-web: gunicorn ensemble_monday.wsgi --log-file -
+web: gunicorn locallibrary.wsgi --log-file -
