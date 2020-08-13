@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '$^e7cfr2n_pob(de$fyc_zq9ij3=!p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )  #20/07/06 Django will display a standard 404 page
 
-ALLOWED_HOSTS = ['localhost', 'http://192.168.0.8:8000', '192.168.0.8', '192.168.0.179']
+ALLOWED_HOSTS = ['localhost', 'http://192.168.0.8:8000', '192.168.0.8', '192.168.0.179', '.herokuapp.com']
 
 
 # Application definition
