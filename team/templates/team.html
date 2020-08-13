@@ -1,0 +1,261 @@
+<!doctype html>
+
+
+{% extends "base.html" %}
+
+
+{% load static %}
+
+
+{% block page_content %}
+
+
+ <style>
+
+        #container {
+            width: 1000px;
+            margin: 0px auto;
+            padding: 20px;
+        }
+
+        #title {
+            width: 900px;
+            margin: 0px auto;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            word-break: keep-all;
+        }
+
+        #gap {
+            width: 100%;
+            height: 70px;
+        }
+
+        #contentcontainer {
+            width: 900px;
+            margin: 0px auto;
+            word-break: keep-all;
+        }
+
+        #membercontainer {
+            width: 250px;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            word-break: keep-all;
+        }
+
+        #memberphoto {
+            width: 230px;
+            margin: 0px auto;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        #membername {
+            width: 230px;
+            margin: 0px auto;
+            padding: 4px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        #memberrole {
+            width: 230px;
+            padding: 4px;
+            margin: 0px auto;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        #membercontent {
+            width: 230px;
+            margin: 0px auto;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        @media ( max-width: 700px ) {
+            #container {
+                width: auto;
+            }
+
+            #title {
+                width: auto;
+            }
+
+            #gap {
+                width: auto;
+            }
+
+            #contentcontainer {
+                width: auto;
+            }
+
+
+            #membercontainer {
+                width: auto;
+                float: none;
+                display: block;
+            }
+        }
+        
+    </style>
+
+    <html>
+    
+    <body id="page-top">
+        <header class="mastheadsub">
+            <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <h1 class="text-white">Project Group Ensemble</h1>
+                        <hr class="divider my-4">
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <h4 class="text-white mb-5">대학가 로컬 비즈니스 솔루션을 고민합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="page-section bg-secondary" id="banner">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Project Group Ensemble</h2>
+                        <hr class="divider light my-4" />
+                        <h4 class="text-white mb-16"> 대학가 로컬 비즈니스 솔루션을 고민합니다.</p> 
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-dark" id="banner">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Project Group Ensemble</h2>
+                        <hr class="divider light my-4" />
+                        <h4 class="text-white mb-16"> 대학가 로컬 비즈니스 솔루션을 고민합니다.</p> 
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <div id="container">
+
+        <div id="title">
+        Executions
+        </div>
+
+        <div id="gap"></div>
+
+        <div id="contentcontainer">
+
+            <!-- 멤버 1 -->
+            <div id="membercontainer">
+                <div id="memberphoto">
+                    <img src="https://i.imgur.com/9oesAT7.png" width="200" height="200" />
+                </div>
+                <div id="membername">
+                    박선우
+                </div>
+                <div id="memberrole">
+                    Engineering
+                </div>
+                <div id="membercontent">
+                    일이관지(一以貫之) | Connect the dots
+                    <br />IG: @wuthebest
+                    <br />Email: swupark@gmail.com
+                    <br />대표번호 | Phone: (+82)10 2248 6365
+                </div>
+            </div>
+
+            <!-- 멤버 2 -->
+            <div id="membercontainer">
+                <div id="memberphoto">
+                    <img src="https://i.imgur.com/9oesAT7.png" width="200" height="200" />
+                </div>
+                <div id="membername">
+                    박선우
+                </div>
+                <div id="memberrole">
+                    Engineering
+                </div>
+                <div id="membercontent">
+                    일이관지(一以貫之) | Connect the dots
+                    <br />IG: @wuthebest
+                    <br />Email: swupark@gmail.com
+                    <br />대표번호 | Phone: (+82)10 2248 6365
+                </div>
+            </div>
+
+            <!-- 멤버 3 -->
+            <div id="membercontainer">
+                <div id="memberphoto">
+                    <img src="https://i.imgur.com/9oesAT7.png" width="200" height="200" />
+                </div>
+                <div id="membername">
+                    박선우
+                </div>
+                <div id="memberrole">
+                    Engineering
+                </div>
+                <div id="membercontent">
+                    일이관지(一以貫之) | Connect the dots
+                    <br />IG: @wuthebest
+                    <br />Email: swupark@gmail.com
+                    <br />대표번호 | Phone: (+82)10 2248 6365
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+        <!-- Contact-->
+        <section class="page-section" id="team">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Contact Us</h2>
+                        <hr class="divider my-4" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                        <div> 010-2248-6365 </div>
+                    </div>
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fab fa-instagram fa-3x mb-3 text-muted"></i>
+                        <div>
+                        &nbsp;
+                        <a href="https://www.instagram.com/ensemble_kr/" target="blank"> DM @ensemble_kr </a>
+                        </div>
+                    </div> 
+                    <div class="col-lg-4 mr-auto text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                        <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                        <a class="d-block" href="mailto:ensemble.kor@gmail.com">ensemble.kor@gmail.com</a>
+ 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>
+</html>
+
+{% endblock %}
+  
+
+
+
+

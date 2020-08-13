@@ -1,0 +1,134 @@
+<!--***** Photo Slide *****-->
+
+<!--<style>
+.container { 
+    display: flex; 
+    overflow-x: auto;
+}
+.container img{
+    margin-right: 15px;
+}
+ 
+</style>-->
+
+
+<!--<tr valign = "top">
+    <td colspam = "5">
+        <h3> Anam Restaurant Week 3.0  </h3>
+    </td>
+</tr>-->
+
+<!--<div class = "container">
+    <img src = "/media/page/images/1.jpeg" alt = "GroupPic" width = "400", height = "auto">
+    <img src = "/media/page/images/2.jpeg" alt = "GroupPic" width = "400", height = "auto">
+    <img src = "/media/page/{{page.page_images}}" alt = "GroupPic" width = "400", height = "auto">
+</div>
+
+<tr valign="top">
+    <td colspan="5">
+        <div class="button-container" align="center" style="padding: 10 10 10 10px;">
+            <a href="https://bit.ly/2SinxOO" target="_blank" style="-webkit-text-size-adjust: none; text-decoration: none; display: inline-block; color: #ffffff; background-color: #000000; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: auto; width: auto; border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;padding: 15px; padding-bottom: 15px; font-family:sans-serif, serif, Georgia, Times, Times New Roman; text-align: center; mso-border-alt: none; word-break: keep-all;"><span style="padding-left:40px;padding-right:40px;font-size:18px;display:inline-block;"><span style="font-size: 16px; line-height: 2; word-break: break-word; mso-line-height-alt: 32px;"><span style="font-size: 18px; line-height: 36px;" data-mce-style="font-size: 18px; line-height: 36px;"><strong>지금 참여하기</strong></span></span></span></a>
+        </div>
+    </td>
+</tr>-->
+
+
+<!--***** Header ver1.0 *****-->
+
+
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'daemun' %}"> Ensemble 2.0</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class= "nav-item active">
+                <a class= "nav-link" href="{% url 'daemun' %}">Home</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'blog_index' %}"> 9/7 - 9/25 </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'polls:polls_index' %}">Polls</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+</nav>-->
+
+
+    <!--***** Comments.view *****-->
+
+
+<!-- Archives
+#def blog_detail(request, pk):
+#    post = Post.objects.get(pk=pk)
+
+    #form = CommentForm()
+    #if request.method == "POST":
+    #   form = CommentForm(request.POST)
+    #   if form.is_valid():
+    #       comment = Comment(
+    #               author=form.cleaned_data["author"],
+    #               body=form.cleaned_data["body"],
+    #               post=post,
+    #               )
+    #       comment.save()
+    #       return redirect("/blog/")
+       #edit url to redirect
+    #comments = Comment.objects.filter(post=post)
+    #context = {"post":post, "comments":comments, "form":form,}
+    #return render(request, "blog_detail.html", context)
+
+#def blog_detail(request, pk):
+#    post = Post.objects.get(pk=pk)
+
+    #form = CommentForm()
+    #if request.method == "POST":
+    #   form = CommentForm(request.POST)
+    #   if form.is_valid():
+    #       comment = Comment(
+    #               author=form.cleaned_data["author"],
+    #               body=form.cleaned_data["body"],
+    #               post=post,
+    #               )
+    #       comment.save()
+    #       return redirect("/blog/")
+       #edit url to redirect
+    #comments = Comment.objects.filter(post=post)
+    #context = {"post":post, "comments":comments, "form":form,}
+    #return render(request, "blog_detail.html", context)-->
+
+
+    <!--***** Blog Index Ver1.0 *****-->
+
+
+<!--<div class="col-md-8 offset-md-2">
+    <h3>Restaurant Week</h3>
+    <hr>
+    {% for post in posts %}
+    <h3><a href="{% url 'blog_detail' post.pk%}">{{post.title}}</a></h3>
+    <small>
+        {{ post.created_on.date}} |&nbsp;
+        Categories:&nbsp;
+        {% for category in post.categories.all %}
+        <a href="{% url 'blog_category' category.name %}">
+            {{ category.name }}
+        </a> |&nbsp;
+        {% endfor %}
+        <a> 총펀딩액: {{ post.totalfund  }}</a> 
+    </small>
+    
+    <div class = "progress" style = "height:15px; width:340px;" valign = "top;" >
+        <div class = "progress-bar" role = "progressbar" style = "width: {{post.call_rate}}%;"  aria-valuemin = "0" aria-valuemax = "100"> {{post.call}}%(총 25만 8천원)</div>
+    </div>
+
+    <p>{{ post.body | slice:":400" }}...</p>
+    {% endfor %}
+</div>-->
+
+
+
+
