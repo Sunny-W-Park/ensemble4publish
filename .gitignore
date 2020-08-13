@@ -134,5 +134,3 @@ dmypy.json
 #Database
 *.sqlite3
 
-#folder
-media/
