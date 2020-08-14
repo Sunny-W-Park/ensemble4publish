@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">펀딩 진행중 ~ 8월 30일</h2>
+                        <h2 class="text-white mt-0"> 레스토랑위크 펀딩 </br>  ~ 8월 30일까지</h2>
                         <hr class="divider light my-4" />
                         <h5 class="text-white mb-16">  근처식당 &nbsp; | &nbsp; 꽌부이 &nbsp;| &nbsp; 발리하이 &nbsp;| &nbsp; 미뇽 &nbsp;  &nbsp;| &nbsp; 일곱평 &nbsp;| &nbsp;  히포크라테스 스프 &nbsp;</p>
 
@@ -45,25 +45,22 @@
 
                 <small>
                     <!--조회수: {{ post.hits  }} |&nbsp;-->
-                카테고리:&nbsp;
                 {% for category in post.categories.all %}
                 <a href="{% url 'blog_category' category.name %}">
                 {{ category.name }}
-                </a> |&nbsp;
+                </a> | &nbsp;
                 {% endfor %}
-                <a> 펀딩 상한: {{ post.totalfund  }}</a>
+                <a> Min: {{ post.min_call }}장 |  Max: {{ post.max_call  }}장 </a> 
                 </br>
-                <strong> 현재 주문량: {{ post.call  }}장</strong>
-                | &nbsp;
-                <a> 펀딩 하한: nn
+                <strong> 현재까지 {{ post.call  }}장 주문되었습니다.  </strong>
                 </a>
                 </small>
                 
                  
-                <div class = "progress" style = "height:15px; width:220px;" valign = "top;" >
+                <!--<div class = "progress" style = "height:15px; width:220px;" valign = "top;" >
                 <div class = "progress-bar" role = "progressbar" style = "width: {{post.call_rate}}%;"  aria-valuemin = "0" aria-valuemax = "100"> {{post.call}}%(총 25만 8천원)
                 </div>
-                </div>
+                </div>-->
 
 
                 <div class="price">
