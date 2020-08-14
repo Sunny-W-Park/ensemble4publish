@@ -135,5 +135,5 @@ dmypy.json
 *.sqlite3
 
 #folder
-#media/
-#images/
+media/
+images/
