@@ -43,6 +43,8 @@ class Post(models.Model):
     image1 = models.ImageField(upload_to ='blog/images', max_length = 550, null = True, blank = True)
     image2 = models.ImageField(upload_to ='blog/images', max_length = 550, null = True, blank = True)
     image3 = models.ImageField(upload_to ='blog/images', max_length = 550, null = True, blank = True)
+    image4 = models.ImageField(upload_to ='blog/images', max_length = 550, null = True, blank = True)
+    image5 = models.ImageField(upload_to ='blog/images', max_length = 550, null = True, blank = True)
     def __str__(self):
         return self.title
 
