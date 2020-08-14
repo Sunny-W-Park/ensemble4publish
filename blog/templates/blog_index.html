@@ -3,6 +3,21 @@
 
 {% block page_content %}
 
+
+<style>
+    
+    .price {
+        width: 200px;
+        height: 60px;
+        float: right;
+        text-align: right;
+        display: inline-block;
+    }
+
+
+</style>
+
+
         <section class="page-section bg-warning" id="banner">
             <div class="container">
                 <div class="row justify-content-center">
@@ -43,9 +58,15 @@
                 </small>
                 
                  
-                <div class = "progress" style = "height:15px; width:285px;" valign = "top;" >
+                <div class = "progress" style = "height:15px; width:220px;" valign = "top;" >
                 <div class = "progress-bar" role = "progressbar" style = "width: {{post.call_rate}}%;"  aria-valuemin = "0" aria-valuemax = "100"> {{post.call}}%(총 25만 8천원)
                 </div>
+                </div>
+
+
+                <div class="price">
+                    <span style="font-size: 15px; color: grey; text-decoration: line-through;"> ₩{{post.price}} </span>
+                    <br /> <span style="font-size: 25px; color: black; font-weight: bold;"> ₩{{post.discounted}} </span>
                 </div>
 
 

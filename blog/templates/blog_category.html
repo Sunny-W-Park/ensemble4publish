@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-<div class="col-md-8 offset-md-2">
+<div class="col-md-8 offset-md-2;" style="float:none; margin: 0 auto; padding-top: 100px;">
     <h3>{{ category | title  }} </h3>
     <hr>
     {% for post in posts %}
@@ -15,7 +15,7 @@
             </a>&nbsp;
             {% endfor %}
         </small>
-        <p>{{ post.body | slice:":400"}}...</p>
+        <p>{{ post.body | slice:":400"}}</p>
         {% endfor %}
 </div>
 {% endblock %}
