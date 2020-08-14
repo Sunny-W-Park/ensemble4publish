@@ -27,7 +27,8 @@ class Post(models.Model):
     call = models.PositiveIntegerField(default=0, verbose_name = '주문량', null = True) 
     call_rate = models.PositiveIntegerField(default=0, verbose_name = '쿠폰펀딩률', null = True)
     menu = models.TextField(max_length=255, verbose_name = '메뉴', null = True)
-    price = models.IntegerField(default=0, verbose_name = '가격', null = True)
+    price = models.IntegerField(default=0, verbose_name = '정가', null = True)
+    discounted = models.IntegerField(default=0, verbose_name = '할인가', null = True)
     min_call = models.PositiveIntegerField(default=0, verbose_name = '최소판매량', null = True)
     target_call = models.PositiveIntegerField(default=0, verbose_name = '목표판매량',  null = True)
     max_call = models.PositiveIntegerField(default=0, verbose_name= '최대판매량',  null = True)
@@ -44,7 +45,7 @@ class Post(models.Model):
     image3 = models.ImageField(upload_to ='blog/images', max_length = 550, null = True, blank = True)
     def __str__(self):
         return self.title
-    
+
     @property
     def click(self):
         self.hits += 1
