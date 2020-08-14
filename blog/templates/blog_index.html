@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+
 {% load static %}
+{% load humanize %}
 
 {% block page_content %}
 
@@ -65,8 +67,8 @@
 
 
                 <div class="price">
-                    <span style="font-size: 15px; color: grey; text-decoration: line-through;"> ₩{{post.price}} </span>
-                    <br /> <span style="font-size: 25px; color: black; font-weight: bold;"> ₩{{post.discounted}} </span>
+                    <span style="font-size: 15px; color: grey; text-decoration: line-through;"> ₩{{post.price | intcomma}} </span>
+                    <br /> <span style="font-size: 25px; color: black; font-weight: bold;"> ₩{{post.discounted | intcomma}} </span>
                 </div>
 
 
