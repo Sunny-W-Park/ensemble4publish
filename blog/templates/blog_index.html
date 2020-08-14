@@ -34,9 +34,12 @@
                 {{ category.name }}
                 </a> |&nbsp;
                 {% endfor %}
-                <a> 총펀딩액: {{ post.totalfund  }}</a>
+                <a> 펀딩 상한: {{ post.totalfund  }}</a>
                 </br>
-                누적 주문: {{ post.call  }}장 
+                <strong> 현재 주문량: {{ post.call  }}장</strong>
+                | &nbsp;
+                <a> 펀딩 하한: nn
+                </a>
                 </small>
                 
                  
