@@ -39,7 +39,7 @@ class Post(models.Model):
     price_details = models.TextField(max_length=2550, null = True)
     message_owner = models.TextField(max_length=255, null = True)
     store_info = models.TextField(max_length=255, null = True)
-    guide = models.TextField(max_length=255, null = True)
+    guide = models.TextField(max_length=2550, null = True)
     image1 = models.ImageField(upload_to ='blog/images', max_length = 550, null = True, blank = True)
     image2 = models.ImageField(upload_to ='blog/images', max_length = 550, null = True, blank = True)
     image3 = models.ImageField(upload_to ='blog/images', max_length = 550, null = True, blank = True)
