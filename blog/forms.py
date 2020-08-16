@@ -15,7 +15,7 @@ class OrderForm(forms.Form):
     quantity  = forms.IntegerField(
             label = '쿠폰 수량',
             max_value = 3,
-            widget=forms.TextInput(attrs={"placeholder": "1회 주문 최대 3장"})
+            widget=forms.TextInput(attrs={"placeholder": "숫자만 입력 |  1회 주문 최대 3장"})
             )
     email = forms.CharField(
             label = '이메일',

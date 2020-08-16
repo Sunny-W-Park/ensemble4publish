@@ -2,6 +2,8 @@
 
 {% load crispy_forms_tags %} <!--for receipt-->
 
+{% load humanize %}
+
 {% block page_content %}
 
 
@@ -36,7 +38,7 @@
         {{ category.name }}
         </a> 
         {% endfor %}
-        | 조회수: {{ post.hits  }}  
+        | 조회수: {{ post.hits | intcomma }}  
         </br>
         <a> Min: {{ post.min_call }}장 |  Max: {{ post.max_call  }}장 </a>
         </br>
