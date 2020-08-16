@@ -58,7 +58,7 @@ def blog_detail(request, pk):
     return render(request, "blog_detail.html", context)
 
 def blog_submit(request):
-    return render(request, "SubmitOK.html")
+        return render(request, "SubmitOK.html")
 
 
 
