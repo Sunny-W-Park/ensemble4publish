@@ -4,6 +4,11 @@ from blog.models import Post, Category, Product, Order  #Comment
 
 
 class PostAdmin(admin.ModelAdmin):
+    list_display = (
+            'title', 
+            'hits',
+            'call',
+            )
     pass
 
 
