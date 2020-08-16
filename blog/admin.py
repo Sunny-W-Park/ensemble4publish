@@ -33,6 +33,7 @@ class OrderAdmin(admin.ModelAdmin):
             'email',
             'phone',
             'message_store',
+            'signature',
             )
     search_fields = ('author', 'post', 'phone')
 

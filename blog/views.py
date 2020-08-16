@@ -44,6 +44,7 @@ def blog_detail(request, pk):
                 email = form.data.get('email'),
                 phone = form.data.get('phone'),
                 message_store = form.data.get('message_store'),
+                signature = form.data.get('signature'),
                 post = post
                 )
             order.save()

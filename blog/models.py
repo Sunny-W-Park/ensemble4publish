@@ -73,6 +73,7 @@ class Order(models.Model):
     email = models.CharField(max_length = 60, null = True, blank = False)
     phone = models.CharField(max_length = 120, null = False, blank = False)
     message_store = models.CharField(max_length=256, null = True, blank = True)
+    signature = models.CharField(max_length = 120, null = True, blank = True)
     created_on = models.DateTimeField(auto_now_add = True, null = True)
     def __str__(self):
         return self.author

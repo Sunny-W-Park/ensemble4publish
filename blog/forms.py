@@ -31,6 +31,12 @@ class OrderForm(forms.Form):
             max_length=256,
             widget=forms.TextInput(attrs={'placeholder': '게시글 하단 전체공개'})
             )
+    signature = forms.CharField(
+            label = '주문서를 제출하시기 전에 <유의사항>을 다시 한 번 확인 부탁드립니다.',
+            max_length=120,
+            widget=forms.TextInput(attrs={'placeholder': '주문과 결제에 동의하신다면, "네"를 입력해주세요.'})
+            )
+
 
     def clean(self):
         cleaned_data = super().clean()
