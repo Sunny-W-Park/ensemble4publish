@@ -14,8 +14,8 @@ class OrderForm(forms.Form):
             )
     quantity  = forms.IntegerField(
             label = '쿠폰 수량',
-            max_value = 5,
-            widget=forms.TextInput(attrs={"placeholder": "1회 주문 최대 5장"})
+            max_value = 3,
+            widget=forms.TextInput(attrs={"placeholder": "1회 주문 최대 3장"})
             )
     email = forms.CharField(
             label = '이메일',
@@ -32,7 +32,7 @@ class OrderForm(forms.Form):
             widget=forms.TextInput(attrs={'placeholder': '게시글 하단 전체공개'})
             )
     signature = forms.CharField(
-            label = '주문서를 제출하시기 전에 <유의사항>을 다시 한 번 확인 부탁드립니다.',
+            label = '주문서를 제출하시기 전에 <필독사항>을 다시 한 번 확인 부탁드립니다.',
             max_length=120,
             widget=forms.TextInput(attrs={'placeholder': '주문과 결제에 동의하신다면, "네"를 입력해주세요.'})
             )
@@ -46,6 +46,7 @@ class OrderForm(forms.Form):
         email = cleaned_data.get('email')
         phone = cleaned_data.get('phone')
         message_store = cleaned_data.get('message_store')
+        signature = cleaned_data.get('signature')
 
 
 #class OrderForm(forms.Form):
