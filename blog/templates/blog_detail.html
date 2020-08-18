@@ -138,15 +138,22 @@
     <hr class="divider my-4" />
 
 
+    {% for category in post.categories.all %} 
+
+    {% if category.name != "펀딩완료"  %}
     <h4>주문서 작성</h4>
     
-
     <form method="post">
         {% csrf_token %}
         {{ form | crispy }}
         <button type = "submit" class = "btn btn-primary">제출하기</button>
     </form>
- 
+    
+    {% elif category.name == "펀딩완료" %}
+    <h4>주문이 마감되었습니다. 성원에 감사드립니다.</h4>
+    {% else %}
+    {% endif %}
+    {% endfor %}
 
     <table class="divider" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" role="presentation" valign="top">
         <tbody>
