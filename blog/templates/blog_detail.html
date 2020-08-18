@@ -140,7 +140,7 @@
 
     {% for category in post.categories.all %} 
 
-    {% if category.name != "펀딩완료"  %}
+    {% if category.name != "주문마감"  %}
     <h4>주문서 작성</h4>
     
     <form method="post">
@@ -149,7 +149,7 @@
         <button type = "submit" class = "btn btn-primary">제출하기</button>
     </form>
     
-    {% elif category.name == "펀딩완료" %}
+    {% elif category.name == "주문마감" %}
     <h4>주문이 마감되었습니다. 성원에 감사드립니다.</h4>
     {% else %}
     {% endif %}
