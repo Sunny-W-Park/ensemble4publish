@@ -194,5 +194,8 @@ SERVER_EMAIL = 'ensemble.kor@gmail.com'
 DEFAULT_FROM_MAIL = 'ensemble.kor'
 
 
-
+# django-gsheets
+GSHEETS = {
+        'CLIENT_SECRETS': '/Users/parksunwoo/ensemble4publish'
+        }
 
