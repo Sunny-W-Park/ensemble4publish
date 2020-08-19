@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'imagekit',
     'crispy_forms',
     'hitcount',
+    'gsheets',
     ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
