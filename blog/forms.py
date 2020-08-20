@@ -10,7 +10,7 @@ class OrderForm(forms.Form):
     author  = forms.CharField(
             label = '닉네임',
             max_length =60,
-            widget=forms.TextInput(attrs={"placeholder": "하단 댓글창에 표기 "})
+            widget=forms.TextInput(attrs={"placeholder": "하단 댓글창에 표시 "})
             )
     quantity  = forms.IntegerField(
             label = '쿠폰 수량',
