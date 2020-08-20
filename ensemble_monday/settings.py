@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'hitcount',
     'gsheets',
-    'updates.apps.UpdatesConfig',
     ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
