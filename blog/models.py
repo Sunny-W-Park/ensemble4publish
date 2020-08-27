@@ -69,7 +69,10 @@ class Product(models.Model):
     sum_call = models.IntegerField(default = 0)
     stat_rate = models.IntegerField(default = 0)
 
-class Order(models.Model):
+class Order(mixins.SheetPushableMixin, models.Model):
+    spreadsheet_id = '1sOyEGnIp2J1lrxTzT8kgIHyXeG6_a0YpaZXr3zxHP64'
+    model_id_field = 'guid'
+    guid = models.CharField(primary_key = True, max_length = 255, default = uuid4)
     post = models.ForeignKey('Post', on_delete=models.CASCADE, related_name='orders',  null = True) #forDB 
     sender = models.CharField(max_length = 60, null = True)
     author = models.CharField(max_length = 60, null = True, blank = True)
