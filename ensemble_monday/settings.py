@@ -196,6 +196,5 @@ DEFAULT_FROM_MAIL = 'ensemble.kor'
 
 # django-gsheets
 GSHEETS = { 
-        'CLIENT_SECRETS': os.path.abspath('client_secret.json'),
-        }
-
+        'CLIENT_SECRETS': os.path.abspath('credentials.json'),
+        } 
