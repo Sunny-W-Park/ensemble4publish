@@ -10,6 +10,10 @@ from django.utils import timezone
 from hitcount.models import HitCountMixin
 from hitcount.settings import MODEL_HITCOUNT
 
+#Gsheets Sync
+from gsheets import mixins
+from uuid import uuid4
+
 #Signals
 #from django.db.models.signals import post_save
 #from django.dispatch import receiver
