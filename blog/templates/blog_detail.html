@@ -140,7 +140,7 @@
 
     {% for category in post.categories.all %} 
 
-    {% if category.name == "주문마감"  %}
+    {% if category.name != "주문마감"  %}
     <h4>주문서 작성</h4>
     
     <form method="post">
