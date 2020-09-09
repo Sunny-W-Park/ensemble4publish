@@ -1,6 +1,8 @@
 from django import forms
 from .models import Post,  Order, Product #,Comment 
 
+from django.core.exceptions import ValidationError
+
 class OrderForm(forms.Form):
     sender  = forms.CharField(
             label = '이름',

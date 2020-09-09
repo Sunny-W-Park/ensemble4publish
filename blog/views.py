@@ -38,28 +38,28 @@ def blog_detail(request, pk):
             with transaction.atomic():
                 post = Post.objects.get(pk=pk)
                 order = Order(
-                sender = form.data.get('sender'),
-                author = form.data.get('author'),
-                quantity = form.data.get('quantity'),
-                email = form.data.get('email'),
-                phone = form.data.get('phone'),
-                message_store = form.data.get('message_store'),
-                signature = form.data.get('signature'),
-                post = post
+                    sender = form.data.get('sender'),
+                    author = form.data.get('author'),
+                    quantity = form.data.get('quantity'),
+                    email = form.data.get('email'),
+                    phone = form.data.get('phone'),
+                    message_store = form.data.get('message_store'),
+                    signature = form.data.get('signature'),
+                    post = post
                 )
             order.save()
 
             post.call += int(form.data.get('quantity'))
             post.save()
-        return render(request, 'SubmitOK.html')
+            return render(request, 'SubmitOK.html')
     orders = Order.objects.filter(post=post).order_by('-created_on')
     order_count = orders.count()
     context = {"post": post, "orders": orders, "form": form, "order_count": order_count,}
     return render(request, "blog_detail.html", context)
 
-def blog_submit(request):
-        return render(request, "SubmitOK.html")
 
+#def blog_submit(request):
+#        return render(request, "SubmitOK.html")
 
 
 class PostMixinDetailView(object):
