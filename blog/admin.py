@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.utils.safestring import mark_safe
 from blog.models import Post, Category, Product, Order  #Comment
 
+import csv
+from django.http import HttpResponse
 
 class PostAdmin(admin.ModelAdmin):
     list_display = (
@@ -41,7 +43,24 @@ class OrderAdmin(admin.ModelAdmin):
             'signature',
             )
     search_fields = ('author', 'post', 'phone')
+    actions = ["export_as_csv"]
+ 
+    def export_as_csv(self, request, queryset):
+ 
+        meta = self.model._meta
+        field_names = [field.name for field in meta.fields]
 
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename={}.csv'.format(meta)
+        writer = csv.writer(response)
+
+        writer.writerow(field_names)
+        for obj in queryset:
+            row = writer.writerow([getattr(obj, field) for field in field_names])
+
+        return response
+        pass
+    export_as_csv.short_description = "Export Selected"
 
 
 #class CommentAdmin(admin.ModelAdmin):

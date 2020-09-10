@@ -64,7 +64,7 @@ class OrderForm(forms.Form):
         if "네" not in cleaned_data:
             raise ValidationError("확인 후 제출 가능합니다.")
         return cleaned_data
-    
+
     #def clean(self):
     #    cleaned_data = super().clean()
     #    sender = cleaned_data.get('sender')
