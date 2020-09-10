@@ -42,7 +42,7 @@ class OrderAdmin(admin.ModelAdmin):
             'message_store',
             'signature',
             )
-    search_fields = ('author', 'post', 'phone')
+    search_fields = ('author', 'phone')
     actions = ["export_as_csv"]
  
     def export_as_csv(self, request, queryset):
