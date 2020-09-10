@@ -73,7 +73,7 @@ class Order(models.Model):
     post = models.ForeignKey('Post', on_delete=models.CASCADE, related_name='orders',  null = True) #forDB 
     sender = models.CharField(max_length = 60, null = True)
     author = models.CharField(max_length = 60, null = True, blank = True)
-    quantity = models.PositiveIntegerField(validators = [MinValueValidator(1), MaxValueValidator(3)])
+    quantity = models.IntegerField(null = True, blank = False)
     email = models.CharField(max_length = 60, null = True, blank = False)
     phone = models.CharField(max_length = 120, null = False, blank = False)
     message_store = models.CharField(max_length=256, null = True, blank = True)
@@ -81,6 +81,7 @@ class Order(models.Model):
     created_on = models.DateTimeField(auto_now_add = True, null = True)
     def __str__(self):
         return self.author
+
 
 
 class Hitcount(models.Model, HitCountMixin):

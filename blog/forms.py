@@ -16,7 +16,7 @@ class OrderForm(forms.Form):
             )
     quantity  = forms.IntegerField(
             label = '쿠폰 수량',
-            max_value = 3,
+            #max_value = 3,
             widget=forms.TextInput(attrs={"placeholder": "숫자만 입력 |  1회 주문 최대 3장"})
             )
     email = forms.CharField(
@@ -39,14 +39,43 @@ class OrderForm(forms.Form):
             widget=forms.TextInput(attrs={'placeholder': '주문과 결제에 동의하신다면, "네"를 입력해주세요.'})
             )
 
+    def clean_email(self):
+        cleaned_data = self.cleaned_data['email']
+        if "@" and ".com" not in cleaned_data:
+            raise ValidationError("유효한 이메일을 입력해주세요.")
+        return cleaned_data
 
-    def clean(self):
-        cleaned_data = super().clean()
-        sender = cleaned_data.get('sender')
-        author = cleaned_data.get('author')
-        quantity = cleaned_data.get('quantity')
-        email = cleaned_data.get('email')
-        phone = cleaned_data.get('phone')
-        message_store = cleaned_data.get('message_store')
-        signature = cleaned_data.get('signature')
+    def clean_quantity(self):
+        cleaned_data = self.cleaned_data['quantity']
+        if 4 <= cleaned_data:
+            raise ValidationError("1회 최대 3장까지만 주문 가능합니다.")
+        if cleaned_data != int:
+            raise ValidationError("유효한 숫자를 입력해주세요.")
+        return cleaned_data
+
+    def clean_phone(self):
+        cleaned_data = self.cleaned_data['phone']
+        if "010" not in cleaned_data:
+            raise ValidationError("유효한 휴대폰 번호를 입력해주세요.")
+        return cleaned_data
+
+    def clean_signature(self):
+        cleaned_data = self.cleaned_data['signature']
+        if "네" not in cleaned_data:
+            raise ValidationError("확인 후 제출 가능합니다.")
+        return cleaned_data
+    
+    #def clean(self):
+    #    cleaned_data = super().clean()
+    #    sender = cleaned_data.get('sender')
+    #    author = cleaned_data.get('author')
+    #    quantity = cleaned_data.get('quantity')
+    #    email = cleaned_data.get('email')
+    #    phone = cleaned_data.get('phone')
+    #    message_store = cleaned_data.get('message_store')
+    #    signature = cleaned_data.get('signature')
+
+    #quantity = models.PositiveIntegerField(validators = [MinValueValidator(1), MaxValueValidator(3)])
+
+
 
