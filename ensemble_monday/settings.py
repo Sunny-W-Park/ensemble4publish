@@ -182,18 +182,6 @@ DATABASES['default'].update(db_from_env)
 import django_heroku
 django_heroku.settings(locals())
 
-
-# django_email
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'ensemble.kor@gmail.com'
-EMAIL_HOST_PASSWORD = 'Ensemble123!'
-SERVER_EMAIL = 'ensemble.kor@gmail.com'
-DEFAULT_FROM_MAIL = 'ensemble.kor'
-
-
 # django-gsheets
 GSHEETS = { 
         'CLIENT_SECRETS': os.path.abspath('client_secret_rev.json'),
