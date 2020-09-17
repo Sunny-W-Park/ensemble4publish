@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %} 
+
+{% block page_content %}
+
+
+<style>
+
+.slide {
+        display: flex;
+        overflow-x: auto;
+    }
+
+        .slide img {
+            margin-right: 15px;
+        }
+
+    #divider {
+        width: 810px;
+        height: 1px;
+        background-color: grey;
+        float: left;
+    }
+
+
+
+</style>
+
+<div class="col-md-8 offset-md-2;" style="float:none; margin: 0 auto; padding-top: 100px;">
+    <h6> {{ feed.created_on }} </h6>
+    <h3>{{ feed.title }}</h3>
+     <!--<h6>
+        {% for category in feed.categories.all %} 
+        {{ category.name }}
+        {% endfor %}
+        </br>
+        게시일: {{ feed.created_on}} 
+     </h6>-->
+    
+<div class="col-md-8">
+    <img src = "/media/{{feed.image1}}" alt = "사진 준비중" width = "100%">
+</div>
+    
+
+
+    <p>{{ feed.body | linebreaks }}</p>
+  
+    <table class="divider" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" role="presentation" valign="top">
+        <tbody>
+            <tr style="vertical-align: top;" valign="top">
+                <td class="divider_inner" style="word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 15px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;" valign="top">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>신청 현황</h4>
+    
+    <h4>{{ feed.call  }}/{{ feed.max  }}명</h4>
+
+    <hr class="divider my-4"></hr>
+    
+    <h4>참가신청</h4>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <button type = "submit" class = "btn btn-primary">제출하기</button>
+    </form>
+
+    {% if messages %}
+    <ul class = "messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class = "{{ message.tags }}"
+            {% endif %}> 
+            {{message}} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <table class="divider" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" role="presentation" valign="top">
+        <tbody>
+            <tr style="vertical-align: top;" valign="top">
+                <td class="divider_inner" style="word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 15px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;" valign="top">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    
+</div> 
+</div>
+{% endblock %}
+

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="col-md-8 offset-md-2;" style="float:none; margin: 0 auto; padding-top: 100px;">
+    <h3> Updates </h3>
+    <hr>
+    {% for feed in feeds %}
+        <h3> {{ feed.title  }}</a></h3>
+        <small>
+            {{ feed.created_on.data }} | &nbsp;
+        </small>
+        <p>{{ feed.body | slice:":400"}}</p>
+        {% endfor %}
+</div>
+{% endblock %}
+
+
