@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'myupdates.apps.MyupdatesConfig',
     #'updates.apps.UpdatesConfig',
-    'polls.apps.PollsConfig',
+    #'polls.apps.PollsConfig',
     'daemun.apps.DaemunConfig',
     'faq.apps.FaqConfig',
     'team.apps.TeamConfig',
