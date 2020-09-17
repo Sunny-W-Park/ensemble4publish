@@ -21,7 +21,7 @@ class Feed(models.Model):
     call = models.PositiveIntegerField(default=0, verbose_name = '참여자수', null = True)
     maxinv = models.PositiveIntegerField(default=0, verbose_name = '인원', null = True)
     body = models.TextField()
-    image1 = models.ImageField(upload_to = 'updates/images', max_length = 550, null = True, blank = True)
+    image1 = models.ImageField(upload_to = 'myupdates/images', max_length = 550, null = True, blank = True)
     def __str__(self):
         return self.title
 
