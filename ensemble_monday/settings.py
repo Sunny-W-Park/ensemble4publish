@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
+    'myupdates.apps.MyupdatesConfig',
     #'updates.apps.UpdatesConfig',
     'polls.apps.PollsConfig',
     'daemun.apps.DaemunConfig',
