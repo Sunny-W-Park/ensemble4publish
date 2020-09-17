@@ -28,7 +28,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255, verbose_name = '제목')
     hits = models.PositiveIntegerField(verbose_name = '조회수', default = 0)
     totalfund = models.CharField(max_length=20, null = True, blank = True)
-    call = models.PositiveIntegerField(default=0, verbose_name = '주문량', null = True) 
+    call = models.PositiveIntegerField(default=0, verbose_name = '주문량', null = True)
     call_rate = models.PositiveIntegerField(default=0, verbose_name = '쿠폰펀딩률', null = True)
     menu = models.TextField(max_length=255, verbose_name = '메뉴', null = True)
     price = models.IntegerField(default=0, verbose_name = '정가', null = True)

@@ -21,13 +21,14 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path("", include("daemun.urls")),
-    path("users/", include("users.urls")),
+    #path("users/", include("users.urls")),
     path("admin/", admin.site.urls),
     path("blog/", include("blog.urls")),
-    path("polls/", include("polls.urls")),
+    #path("polls/", include("polls.urls")),
     path("faq/", include("faq.urls")),
     path("team/", include("team.urls")),
     path('gadmin/', include('gsheets.urls')),
+    path('updates/', include('updates.urls')),
     ]
 
 if settings.DEBUG:
