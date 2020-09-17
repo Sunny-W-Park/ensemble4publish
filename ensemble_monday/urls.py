@@ -28,6 +28,7 @@ urlpatterns = [
     path("faq/", include("faq.urls")),
     path("team/", include("team.urls")),
     path("gadmin/", include("gsheets.urls")),
+    path("updates/", include("myupdates.urls")),
     #path("updates/", include("updates.urls")),
     ]
 
