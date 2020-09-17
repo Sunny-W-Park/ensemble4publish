@@ -27,8 +27,8 @@ urlpatterns = [
     #path("polls/", include("polls.urls")),
     path("faq/", include("faq.urls")),
     path("team/", include("team.urls")),
-    path('gadmin/', include('gsheets.urls')),
-    path('updates/', include('updates.urls')),
+    path("gadmin/", include("gsheets.urls")),
+    path("updates/", include("updates.urls")),
     ]
 
 if settings.DEBUG:
