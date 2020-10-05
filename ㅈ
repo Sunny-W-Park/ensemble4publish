@@ -271,7 +271,7 @@
                     <div class="col-lg-8 text-center">
                         <!--<i class="far fa-4x fa-smile text-primary mb-4"></i>-->
                         <div>
-                            <a class="btn btn-secondary btn-xl js-scroll-trigger" href="">  팀 소식 확인하기 (준비중) </a> 
+                        <a class="btn btn-secondary btn-xl js-scroll-trigger" href="{% url 'blog_index' %}"> 준비중 </a> 
                         </div>
                     </div> 
                 </div>
