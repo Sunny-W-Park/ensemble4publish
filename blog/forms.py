@@ -47,10 +47,10 @@ class OrderForm(forms.Form):
 
     def clean_quantity(self):
         cleaned_data = self.cleaned_data['quantity']
+        if cleaned_data <= 0:
+            raise ValidationError("유효한 숫자를 입력해주세요.")
         if 4 <= cleaned_data:
             raise ValidationError("1회 최대 3장까지만 주문 가능합니다.")
-        if cleaned_data != int:
-            raise ValidationError("유효한 숫자를 입력해주세요.")
         return cleaned_data
 
     def clean_phone(self):
