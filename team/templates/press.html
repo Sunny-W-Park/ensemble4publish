@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block page_content %}
+
+
+<head>
+    
+
+    <style>
+
+        #container {
+            width: 1100px;
+            margin: 0px auto;
+            border: 1px red solid;
+        }
+
+        #title {
+            width: 100%;
+            margin: 0px auto;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            word-break: keep-all;
+        }
+
+        #gap {
+            width: 100%;
+            height: 70px;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Introduction -->
+    <section class="page-section bg-secondary" id="banner">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white mt-0"> Press & Media </h2>
+                    <hr class="divider light my-4">
+                    <p class="text-white mb-16"> 문의: ensemble.kor@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="title">
+        <div id="gap"></div>
+        Latest Release
+        </div>
+
+        <div id="gap"></div>
+
+        <!-- 밑으로 -->
+        
+        
+        <div class="container">
+
+            <div class="row">
+            {% for press in presss %}
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                  <a href="#"></a>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                       <b>{{press.title}}</b></a>
+                    </h4>
+                    <h6>{{press.created_on.date}}</h6>
+                    <h6>{{press.source}}</h6>
+                    <a href="{{press.href}}" target = "blank">Read Article ></a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %} 
+        
+
+            </div>
+            <!-- /.row -->
+    
+          </div>
+    </div>
+
+    <div id="gap"></div>
+        
+</body>
+</html>
+
+{% endblock %}
