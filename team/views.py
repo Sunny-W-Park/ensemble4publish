@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Press
+from team.models import Press
 
 def team(request):
     return render(request, 'team.html')

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Press
+from team.models import Press
 
 class PressAdmin(admin.ModelAdmin):
     list_display = (
