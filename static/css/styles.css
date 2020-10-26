@@ -10143,7 +10143,7 @@ header.mastheadsub {
 header.mastheadsub h1 {
   font-size: 2.25rem;
 }
-@media (min-width: 992px) {
+@media (min-width: 200px) {
   header.mastheadsub {
     height: 70vh;
     min-height: 40rem;
