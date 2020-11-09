@@ -74,7 +74,18 @@
                     </h4>
                     <h6>{{press.created_on.date}}</h6>
                     <h6>{{press.source}}</h6>
-                    <a href="{{press.href}}" target = "blank">Read Article ></a>
+                    
+                    {% for category in press.categories.all %}
+                    {% if category.name == "Broadcast" %}
+                    <a href="{{press.href}}" target = "blank">Watch Video </a>
+                    
+                    {% elif category.name == "News" %}
+                    <a href="{{press.href}}" target = "blank">Read Article </a>
+                  
+                    {% else %}
+                    {% endif %}
+                    {% endfor %}
+
                   </div>
                 </div>
               </div>

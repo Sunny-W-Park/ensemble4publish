@@ -1,5 +1,5 @@
 from django.contrib import admin
-from team.models import Press
+from team.models import Category, Press
 
 class PressAdmin(admin.ModelAdmin):
     list_display = (
@@ -11,7 +11,10 @@ class PressAdmin(admin.ModelAdmin):
     search_fields = ('source', 'title')
     pass
 
-admin.site.register(Press, PressAdmin)
+class CategoryAdmin(admin.ModelAdmin):
+    pass
 
+admin.site.register(Press, PressAdmin)
+admin.site.register(Category, CategoryAdmin)
 
 # Register your models here.
