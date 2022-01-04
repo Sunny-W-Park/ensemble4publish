@@ -131,12 +131,16 @@ dmypy.json
 # Text backup files
 *.bak
 
-#Database
+# Database
 *.sqlite3
 
-#folder
+# folder
 #media/
 #images/
 
-#Updates Page
+# Updates Page
 updates/
+
+# json
+secrets.json
+
