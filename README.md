@@ -1,2 +1,2 @@
 # ensemble4publish
-ensemble website to be published on heroku
+ensemble website 2.0 to be published on heroku
