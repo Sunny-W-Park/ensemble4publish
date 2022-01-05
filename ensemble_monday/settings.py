@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os, json
 from django.core.exceptions import ImproperlyConfigured
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -22,27 +23,33 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-secret_file = os.path.join(BASE_DIR, 'secrets.json')
 
-with open(secret_file) as f:
-    secrets = json.loads(f.read())
+if os.path.isfile(os.path.join(BASE_DIR, 'secrets.json')) == True:
+    #### Local ####
+    secret_file = os.path.join(BASE_DIR, 'secrets.json')
 
-def get_secret(setting, secrets = secrets):
-    try:
-        return secrets[setting]
-    except KeyError:
-        error_msg = "Set the {} environment variable".format(setting)
-        raise ImproperlyConfigured(error_msg)
+    with open(secret_file) as f:
+        secrets = json.loads(f.read())
 
-SECRET_KEY = get_secret("SECRET_KEY")
+    def get_secret(setting, secrets = secrets):
+        try:
+            return secrets[setting]
+        except KeyError:
+            error_msg = "Set the {} environment variable".format(setting)
+            raise ImproperlyConfigured(error_msg)
 
-#import os
-#SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '$^e7cfr2n_pob(de$fyc_zq9ij3=!p17jfjrsu=f!w_yu!#@(w')
+    SECRET_KEY = get_secret("SECRET_KEY")
+
+else:
+    #### Heroku ####
+    SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )  #20/07/06 Django will display a standard 404 page
 
 ALLOWED_HOSTS = ['localhost', 'http://192.168.0.8:8000', '192.168.0.8', '192.168.0.179', '192.168.0.6',  'herokuapp.com']
+
 
 # Application definition
 
@@ -178,24 +185,29 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # When DEBUG=False and AminEmailHandler is configured in LOGGING(done by default), Django emails these people the details of exceptions raised in the request/response cycle.
 # Must be added in the real project
 
+
 #Login
 LOGIN_URL = '/users/login/' #Login URL
 LOGIN_REDIRECT_URL = '/users/main/' #Post-Login URL
 LOGOUT_REDIRECT_URL = '/' #Post-Logout URL
 AUTH_USER_MODEL = "users.User" #Custom Auth Model
 
+
 #Hitcount
+
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
+
 # django_heroku==0.3.1
 import django_heroku
 django_heroku.settings(locals())
 
+
 # django-gsheets
-GSHEETS = { 
+GSHEETS = {
         'CLIENT_SECRETS': os.path.abspath('client_secret_rev.json'),
-        } 
+        }
