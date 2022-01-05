@@ -38,10 +38,13 @@ if os.path.isfile(os.path.join(BASE_DIR, 'secrets.json')) == True:
             raise ImproperlyConfigured(error_msg)
 
     SECRET_KEY = get_secret("SECRET_KEY")
+    GSHEETS = get_secret("client_secret")
 
 else:
     #### Heroku ####
     SECRET_KEY = os.environ['SECRET_KEY']
+    #django-gsheets
+    GSHEETS = os.environ['client_secret']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -207,6 +210,6 @@ django_heroku.settings(locals())
 
 
 # django-gsheets
-GSHEETS = {
-        'CLIENT_SECRETS': os.path.abspath('client_secret_rev.json'),
-        }
+#GSHEETS = {
+#        'CLIENT_SECRETS': os.path.abspath('client_secret_rev.json'),
+#        }
