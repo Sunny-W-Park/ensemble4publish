@@ -23,7 +23,7 @@ https://www.projectensemble.kr/team/
     
     * Backend : [Sunwoo Park](https://github.com/Sunny-W-Park)
     * Frontend : [Jungyun Lee](https://github.com/kv0241008)
-    * Designer : [Sooah Jang](sooah04@naver.com)
+    * Designer : Sooah Jang (sooah04@naver.com)
 
 
 ### 2. Technology Stack
@@ -55,6 +55,8 @@ https://www.projectensemble.kr/team/
 #### 1. Landing page
 ![TBU](TBU)
 #### 2. Funding events
+![TBU](TBU)
+#### 3. Order Form
 ![TBU](TBU)
 
 
