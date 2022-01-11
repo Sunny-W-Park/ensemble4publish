@@ -8,7 +8,6 @@
 <a href="2. Technology Stack">2. Technology Stack</a><br>
 <a href="3. Installation">3. Installation</a><br>
 <a href="4. User Interface">4. User Interface</a><br>
-<a href="5. License">5. License</a><br>
 
 
 ### 1. Introduction
@@ -69,8 +68,4 @@ https://www.projectensemble.kr/team/
 #### 3. Order Form
 
 ![Screen Shot 2022-01-11 at 21 06 03](https://user-images.githubusercontent.com/60367230/148939670-07862950-8ed9-4337-b2d4-e364b341c260.png)
-
-### 5. License
-
-Distributed under the MIT License. See LICENSE.txt for more information.
 
