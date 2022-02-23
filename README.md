@@ -16,7 +16,7 @@
 
 * <b>2020 Anam Restaurant Week</b> <br>
 
-Following its first project ("Ensemble 1.0", March 2020 - June 2020), which helped financing small and local businesses near the Korea University campus town through issuing prepaid coupons, the team has launched this new website to provide crowdfunding services. In August 2020, more than 450 customers joined crowdfunding events and used discounted coupons during the Anam Restaurant Week ("Ensemble 2.0", August 2020 - September 2020).
+Following its first project ("Ensemble 1.0", March 2020 - June 2020), which helped financing small and local businesses near the Korea University campus town through issuing prepaid coupons, the team has launched a new website to provide crowdfunding services. In August 2020, more than 450 customers joined crowdfunding events and consumed discounted coupons during the Anam Restaurant Week ("Ensemble 2.0", August 2020 - September 2020).
 
 * <b>Project Team Ensemble </b> <br>
 https://www.projectensemble.kr/team/
